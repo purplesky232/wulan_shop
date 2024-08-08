@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-commerce Baju</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<style>
+    body {
+        background-color: #f5f6fa;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+        padding: 20px;
+    }
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: calc(100% * (3 / 4));
+        overflow: hidden;
+    }
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   .image {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="container">
+        <a href="Polo1.JPG" class="image-container">
+            <img src="Polo1.JPG" class="image" />
+        </a>
+        <a href="Polo2.JPG" class="image-container">
+            <img src="Polo2.JPG" class="image" />
+        </a>
+        <a href="Polo3.JPG" class="image-container">
+            <img src="Polo3.JPG" class="image" />
+        </a>
+        <a href="Polo4.JPG" class="image-container">
+            <img src="Polo4.JPG" class="image" />
+        </a>
+    </div>
+</div>
+
+<script>
+    const container = document.querySelector('.container');
+    const images = container.querySelectorAll('img');
+    images.forEach(image => {
+        image.addEventListener('click', () => window.open(image.src, '_blank'));
+    });
+</script>
+
+</body>
+</html>
